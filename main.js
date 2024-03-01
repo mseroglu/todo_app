@@ -78,7 +78,7 @@ function listele(item) {
         const update_id = element.getAttribute("data-id")
         submit_btn.setAttribute("update-id", update_id)
         //delBtn.classList.add("alert-hidden")
-        e.currentTarget.parentElement.lastElementChild.classList.add("alert-hidden")
+        e.currentTarget.nextElementSibling.classList.add("alert-hidden")
     })
 
     const delBtn = element.querySelector(".del-btn")
