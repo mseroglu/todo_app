@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+:root {
+  /* dark shades of primary color*/
+  --clr-primary-1: hsl(205, 86%, 17%);
+  --clr-primary-2: hsl(205, 77%, 27%);
+  --clr-primary-3: hsl(205, 72%, 37%);
+  --clr-primary-4: hsl(205, 63%, 48%);
+  /* primary/main color */
+  --clr-primary-5: #49a6e9;
+  /* lighter shades of primary color */
+  --clr-primary-6: hsl(205, 89%, 70%);
+  --clr-primary-7: hsl(205, 90%, 76%);
+  --clr-primary-8: hsl(205, 86%, 81%);
+  --clr-primary-9: hsl(205, 90%, 88%);
+  --clr-primary-10: hsl(205, 100%, 96%);
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(211, 39%, 23%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-4: hsl(209, 28%, 39%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-white: #fff;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(0, 80%, 83%);
+  --clr-green-dark: hsl(125, 67%, 44%);
+  --clr-green-light: hsl(126, 78%, 84%);
+  --clr-black: #222;
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --radius: 0.5rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  --max-width: 1170px;
+  --fixed-width: 620px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    background-color: var(--clr-grey-10);
+    line-height: 1.5;
+    color: var(--clr-grey-1);
+    font-size: 14px;
+    font-family: var(--ff-secondary);
+}
+
+h3{
+    letter-spacing: var(--spacing);
+    text-transform: capitalize;
+    font-size: 24px;
+    font-family: var(--ff-primary);
+    margin-top: 20px;
+    color: var(--clr-primary-2);
+}
+p{
+    color: var(--clr-grey-5);
+}
+.center-section{
+    text-align: center;
+    width: 90%;
+    max-width: 550px;
+    padding: 20px 40px;
+    margin: 100px auto;
+    background-color: var(--clr-white);
+    border-radius: var(--radius);
+    box-shadow: var(--dark-shadow);
+    transition: .35s;
+}
+.center-section:hover{
+    box-shadow: var(--light-shadow);
+}
+.alert{
+    text-align: center;
+    letter-spacing: var(--spacing);
+    border-radius: var(--radius);
+    font-size: 16pt;
+    text-transform: capitalize;
+    padding: 6px;
+}
+.alert-success{
+    background-color: var(--clr-green-light);
+    color: var(--clr-green-dark);    
+}
+.alert-danger{
+    background-color: var(--clr-red-light);
+    color: var(--clr-red-dark)
+}
+.alert-warning{
+    background-color: yellow;
+    color: rgb(125, 125, 11);    
+}
+.alert-hidden{
+    visibility: hidden;
+}
+.grocery-item{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--clr-grey-10);
+    margin: 5px 0;
+    padding: 5px 0;
+    transition: .35s;
+}
+.grocery-item:hover p{
+    color: var(--clr-black);
+}
+.btn{
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    transition: .35s;
+}
+.edit-btn{
+    color: var(--clr-green-dark);
+}
+.del-btn{
+    color: var(--clr-red-dark);
+}
+.edit-btn:hover, .del-btn:hover, .clear-btn:hover{
+    scale: 1.2;
+}
+.form-control{
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+#grocery{
+    padding: 5px;
+    background-color: var(--clr-grey-10);
+    border-top-left-radius: var(--radius);
+    border-bottom-left-radius: var(--radius);
+    font-size: 16px;
+    border-color: transparent;
+    outline-color: var(--clr-primary-5);
+    border: 1px solid var(--clr-primary-5);
+    flex: 1 0 auto;
+}
+#grocery::placeholder{
+    color: var(--clr-grey-6);
+    letter-spacing: 1px;
+}
+.form-control button{
+    padding: 5px 10px;
+    border-top-right-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
+    background-color: var(--clr-primary-5);
+    letter-spacing: var(--spacing);
+    border-color: transparent;
+    color: var(--clr-white);
+    transition: .35s;
+    cursor: pointer;
+}
+.form-control button:hover{
+    border: 2px solid var(--clr-primary-5);
+    background-color: var(--clr-white);
+    color: var(--clr-primary-5);    
+}
+.clear-btn{
+    color: var(--clr-red-dark);
+    margin-top: 20px;
+    letter-spacing: var(--spacing);
+    font-weight: bold;
+    padding: 5px;
+}
+
+
+
+
+
+
