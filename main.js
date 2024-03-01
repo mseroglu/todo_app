@@ -69,7 +69,7 @@ function listele(item) {
         </div>    `
 
     const editBtn = element.querySelector(".edit-btn")
-    editBtn.addEventListener("click", () => {
+    editBtn.addEventListener("click", (e) => {
         submit_btn.textContent = "Güncelle"
         editFlag = true
         groceryInput.value = element.firstElementChild.textContent
@@ -77,7 +77,8 @@ function listele(item) {
         element.style.backgroundColor = "yellow"
         const update_id = element.getAttribute("data-id")
         submit_btn.setAttribute("update-id", update_id)
-        delBtn.classList.add("alert-hidden")
+        //delBtn.classList.add("alert-hidden")
+        e.currentTarget.parentElement.lastElementChild.classList.add("alert-hidden")
     })
 
     const delBtn = element.querySelector(".del-btn")
